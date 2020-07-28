@@ -1,6 +1,7 @@
 
 select_other_columns <- function(data) {
-  othernames <- grep("other$|Other$|autre$|Autre$", names(data),
+  names(data) <- sub("[X_]*|[_]*","",names(data))
+  othernames <- grep("other$|Other$|autre$|Autre$|uuid", names(data),
     value = T
   )
   data[othernames]
