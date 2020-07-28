@@ -144,8 +144,8 @@ find_other_responses <- function (data)
 #' list all responses in all columns that might be "specify other" responses to a multiple choice question
 #'
 #' @param data a dataframe
-#' @details Performs a non-case sensitive search for "other" in english and french along the column names of the dataframe and returns all unique values and their frequency.
-#' @return A dataframe with one row per potential issue. It has columns for the corresponding row index in the original data; the suspicious value; the variable name in the original dataset in which the suspicious value occured; A description of the issue type.
+#' @details Performs a non-case sensitive search for "other" in english and french along the column names of the dataframe and returns all values.
+#' @return A dataframe . It has columns for the corresponding row uuid in the original data; the suspicious value; the variable name in the original dataset in which the suspicious value occured.
 #' @export
 list_other_responses <- function (data)
 {
